@@ -30,7 +30,7 @@ export default function Chart (props) {
 }
 
 Chart.propTypes = {
-  data: PropsTypes.object.isRequired,
+  data: PropsTypes.array.isRequired,
 }
 
 Chart.defaultProps = {

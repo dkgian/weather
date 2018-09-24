@@ -9,6 +9,7 @@
           "components": [ "Link" ],
           "specialLink": [ "to", "hrefLeft", "hrefRight" ],
           "aspects": [ "noHref", "invalidHref", "preferButton" ]
-        }]
+        }],
+        "no-new": 0
     }
 }

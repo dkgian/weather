@@ -4,6 +4,7 @@ import { Sparklines, SparklinesLine } from 'react-sparklines'
 import _ from 'lodash'
 
 import Chart from '../components/chart'
+import GoogleMap from '../components/google_map'
 
 import '../../src/App.css'
 
@@ -13,11 +14,12 @@ class WeatherList extends Component {
     const temps = _.map(cityData.list.map(weather => weather.main.temp), temps => temps - 273)
     const pressure = cityData.list.map(weather => weather.main.pressure)
     const humidity = cityData.list.map(weather => weather.main.humidity)
+    const { lon, lat } = cityData.city.coord
 
     console.log(temps)
     return (
       <tr key={name}>
-        <td> {name} </td>
+        <td> <GoogleMap lon={lon} lat={lat} /> </td>
         <td>
           <Chart data={temps} color='red' units='*C' />
         </td>
