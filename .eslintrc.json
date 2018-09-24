@@ -1,6 +1,14 @@
 {
     "extends": "standard",
     "rules": {
-        "comma-dangle": ["error", "always-multiline"]
+        "comma-dangle": ["error", "always-multiline"],
+        "class-methods-use-this": "off",
+        "semi": ["error", "never"],
+        "react/jsx-filename-extension": "off",
+        "jsx-a11y/anchor-is-valid": [ "error", {
+          "components": [ "Link" ],
+          "specialLink": [ "to", "hrefLeft", "hrefRight" ],
+          "aspects": [ "noHref", "invalidHref", "preferButton" ]
+        }]
     }
 }
